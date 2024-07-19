@@ -1,0 +1,6 @@
+PyPDF2
+nltk
+spacy
+pandas
+scikit-learn
+notebook
