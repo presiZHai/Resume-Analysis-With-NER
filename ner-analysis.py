@@ -25,7 +25,17 @@ def extract_text_from_pdf(pdf_path):
 data_folder = 'data'
 
 # List of PDF file names containing resumes
-pdf_files = ['CV_Kanika.pdf', 'CV_Mythily.pdf', 'CV_Nikhil.pdf']
+pdf_files = [
+    'CV_Abhilash.pdf',
+    'CV_Aleksandr.pdf',
+    'CV_Andrea.pdf',
+    'CV_Charlotte.pdf',
+    'CV_Kanika.pdf', 
+    'CV_Manuel.pdf',
+    'CV_Mythily.pdf', 
+    'CV_Nikhil.pdf', 
+    
+]
 
 # Full paths to the PDF files
 pdf_paths = [os.path.join(data_folder, pdf_file) for pdf_file in pdf_files]
@@ -127,8 +137,8 @@ similarity_scores = cosine_similarity(company_tfidf, tfidf_matrix).flatten()
 # Get the indices of resumes sorted by similarity score
 sorted_indices = similarity_scores.argsort()[::-1]
 
-# Display the top 3 most similar resumes
-top_n = 3
+# Display the top 8 most similar resumes
+top_n = 8
 for i in range(top_n):
     index = sorted_indices[i]
     print(f"Resume ID: {data['ID'][index]}")
